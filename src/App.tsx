@@ -130,7 +130,7 @@ function App() {
         Login using Google
       </button>
       <button onClick={loginGithub} className="card">
-        Login using Auth0 (Google)
+        Login using Auth0 (Google, GitHub)
       </button>
     </>
   );
