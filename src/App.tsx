@@ -14,7 +14,8 @@ function App() {
   const subVerifierDetailsGoogle = {
     typeOfLogin: "google",
     verifier: "w3a-google",
-    clientId: "774338308167-q463s7kpvja16l4l0kko3nb925ikds2p.apps.googleusercontent.com",
+    clientId:
+      "774338308167-q463s7kpvja16l4l0kko3nb925ikds2p.apps.googleusercontent.com",
   };
 
   const subVerifierDetailsGithub = {
@@ -41,7 +42,7 @@ function App() {
           network: "testnet",
         });
         await torus.init();
-        setTorus(torus)
+        setTorus(torus);
       } catch (error) {
         console.error(error);
       }
@@ -60,9 +61,9 @@ function App() {
       verifierIdentifier: commonVerifierIdentifier,
       subVerifierDetailsArray: [subVerifierDetailsGoogle],
     });
-    console.log(loginDetails)
-    setUser(loginDetails)
-  }
+    console.log(loginDetails);
+    setUser(loginDetails);
+  };
 
   const loginGithub = async () => {
     if (!torus) {
@@ -74,9 +75,9 @@ function App() {
       verifierIdentifier: commonVerifierIdentifier,
       subVerifierDetailsArray: [subVerifierDetailsGithub],
     });
-    console.log(loginDetails)
-    setUser(loginDetails)
-  }
+    console.log(loginDetails);
+    setUser(loginDetails);
+  };
 
   const getUserInfo = async () => {
     if (!torus) {
@@ -95,46 +96,6 @@ function App() {
     setUser(null);
   };
 
-  // const getAccounts = async () => {
-  //   if (!provider) {
-  //     uiConsole("provider not initialized yet");
-  //     return;
-  //   }
-  //   const rpc = new RPC(provider);
-  //   const userAccount = await rpc.getAccounts();
-  //   uiConsole(userAccount);
-  // };
-
-  // const getBalance = async () => {
-  //   if (!provider) {
-  //     uiConsole("provider not initialized yet");
-  //     return;
-  //   }
-  //   const rpc = new RPC(provider);
-  //   const balance = await rpc.getBalance();
-  //   uiConsole(balance);
-  // };
-
-  // const signMessage = async () => {
-  //   if (!provider) {
-  //     uiConsole("provider not initialized yet");
-  //     return;
-  //   }
-  //   const rpc = new RPC(provider);
-  //   const result = await rpc.signMessage();
-  //   uiConsole(result);
-  // };
-
-  // const sendTransaction = async () => {
-  //   if (!provider) {
-  //     uiConsole("provider not initialized yet");
-  //     return;
-  //   }
-  //   const rpc = new RPC(provider);
-  //   const result = await rpc.sendTransaction();
-  //   uiConsole(result);
-  // };
-
   function uiConsole(...args: any[]): void {
     const el = document.querySelector("#console>p");
     if (el) {
@@ -150,26 +111,6 @@ function App() {
             Get User Info
           </button>
         </div>
-        {/* <div>
-          <button onClick={getAccounts} className="card">
-            Get Accounts
-          </button>
-        </div>
-        <div>
-          <button onClick={getBalance} className="card">
-            Get Balance
-          </button>
-        </div>
-        <div>
-          <button onClick={signMessage} className="card">
-            Sign Message
-          </button>
-        </div>
-        <div>
-          <button onClick={sendTransaction} className="card">
-            Send Transaction
-          </button>
-        </div> */}
         <div>
           <button onClick={logout} className="card">
             Log Out
@@ -185,14 +126,13 @@ function App() {
 
   const logoutView = (
     <>
-    <button onClick={loginGoogle} className="card">
-      Login using Google
-    </button>
-    <button onClick={loginGithub} className="card">
-      Login using Auth0 (Google)
-    </button>
+      <button onClick={loginGoogle} className="card">
+        Login using Google
+      </button>
+      <button onClick={loginGithub} className="card">
+        Login using Auth0 (Google)
+      </button>
     </>
-    
   );
 
   return (
