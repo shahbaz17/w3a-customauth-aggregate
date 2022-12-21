@@ -38,7 +38,7 @@ function App() {
     const init = async () => {
       try {
         const torus = new DirectWebSdk({
-          baseUrl: "http://localhost:3000/serviceworker/",
+          baseUrl: `${window.location.origin}/serviceworker`,
           network: "testnet",
         });
         await torus.init();

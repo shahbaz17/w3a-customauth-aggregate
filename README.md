@@ -1,10 +1,10 @@
-# Web3Auth Core x Google Login Demo Application
+# Web3Auth [CustomAuth] Google-Auth0 Demo Application
 
 ## Quick Start
 
 ```bash
-git clone https://github.com/shahbaz17/web3auth-core-google-demo.git
-cd web3auth-core-google-demo
+git clone https://github.com/shahbaz17/w3a-customauth-aggregate
+cd w3a-customauth-aggregate
 ```
 
 ## Installation
@@ -22,8 +22,3 @@ Run:
 ```bash
 npm run start
 ```
-
-## Configure
-
-Follow https://web3auth.io/docs/custom-authentication/social-providers/google to
-create a Google application and set up Google Custom Authentication.
